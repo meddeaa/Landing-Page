@@ -103,9 +103,7 @@ form.addEventListener("submit", function (e) {
     errors.checkbox = "You Must Agree To Join Our Newsletter";
   }
 
-  document
-    .querySelectorAll(".form__error")
-    .forEach((el) => (el.textContent = ""));
+  document.querySelectorAll(".form__error").forEach((el) => (el.textContent = ""));
 
   for (let key in errors) {
     const error = document.getElementById("error-" + key);
@@ -114,8 +112,10 @@ form.addEventListener("submit", function (e) {
 
   if (Object.keys(errors).length === 0) {
     form.reset();
-
     success.textContent = "You've Successfully Subscribed! 🎸";
+    setTimeout(() => {
+      success.textContent = "";
+    }, 4000);
   }
 });
 
@@ -157,6 +157,24 @@ checkbox.addEventListener("change", () => {
     errorCheckbox.textContent = "";
   }
 });
+
+document.querySelectorAll(".form__toggle").forEach((icon) => {
+  icon.addEventListener("click", () => {
+    const targetId = icon.getAttribute("data-target");
+    const input = document.getElementById(targetId);
+
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("ri-eye-off-line");
+      icon.classList.add("ri-eye-line");
+    } else {
+      input.type = "password";
+      icon.classList.remove("ri-eye-line");
+      icon.classList.add("ri-eye-off-line");
+    }
+  });
+});
+
 
 // Scroll To Top
 const scrollBtn = document.getElementById("scrollToTop");

@@ -205,44 +205,56 @@
         <div id="playlist">Loading...</div>
       </section>
       <section id="SUBSCRIBE">
-        <div class="circle"></div>
-        <div class="subscribe">
-          <h3 class="heading">Subscribe</h3>
-          <form class="form" id="form">
-            <span class="subscribe__text">Subscribe to Our Newsletter</span>
-            <input
-              type="email"
-              placeholder="Email address"
-              class="form__input"
-              id="email"
-            />
-            <p class="form__error" id="error-email"></p>
-            <input
-              type="password"
-              placeholder="Password"
-              class="form__input"
-              id="password1"
-            />
-            <p class="form__error" id="error-pwd1"></p>
-            <input
-              type="password"
-              placeholder="Confirm password"
-              class="form__input"
-              id="password2"
-            />
-            <p class="form__error" id="error-pwd2"></p>
-            <div class="form__check">
-              <input id="checkbox" type="checkbox" />
-              <label for="checkbox" class="form__checkbox">
-                I want to join the newsletter
-              </label>
-            </div>
-            <p class="form__error" id="error-checkbox"></p>
-            <p id="form-success" class="form__success"></p>
-            <button class="form__submit">Subscribe</button>
-          </form>
-        </div>
-      </section>
+  <div class="circle"></div>
+  <div class="subscribe">
+    <h3 class="heading">Subscribe</h3>
+    <form class="form" id="form">
+      <span class="subscribe__text">Subscribe to Our Newsletter</span>
+
+      <input
+        type="email"
+        placeholder="Email address"
+        class="form__input"
+        id="email"
+      />
+      <p class="form__error" id="error-email"></p>
+
+      <div class="form__input-group">
+        <input
+          type="password"
+          placeholder="Password"
+          class="form__input"
+          id="password1"
+        />
+        <i class="ri-eye-off-line form__toggle" data-target="password1"></i>
+      </div>
+      <p class="form__error" id="error-pwd1"></p>
+
+      <div class="form__input-group">
+        <input
+          type="password"
+          placeholder="Confirm password"
+          class="form__input"
+          id="password2"
+        />
+        <i class="ri-eye-off-line form__toggle" data-target="password2"></i>
+      </div>
+      <p class="form__error" id="error-pwd2"></p>
+
+      <div class="form__check">
+        <input id="checkbox" type="checkbox" />
+        <label for="checkbox" class="form__checkbox">
+          I want to join the newsletter
+        </label>
+      </div>
+      <p class="form__error" id="error-checkbox"></p>
+      <p id="form-success" class="form__success"></p>
+
+      <button class="form__submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
     </main>
 
     <footer class="footer" id="INFO">

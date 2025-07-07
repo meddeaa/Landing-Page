@@ -545,6 +545,26 @@ main {
   outline: none;
 }
 
+.form__input-group {
+  position: relative;
+}
+
+.form__input-group .form__input {
+  width: 100%; 
+  padding-right: 5rem; 
+}
+
+.form__toggle {
+  position: absolute;
+  top: 36%;
+  right: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+}
+
+
 .form__check {
   display: flex;
   margin-bottom: 1.25em;
