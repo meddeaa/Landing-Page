@@ -87,6 +87,10 @@ form.addEventListener("submit", function (e) {
 
   let errors = {};
 
+  if (email.value === "") {
+    errors.email = "Email Field Can Not Be Empty";
+  }
+
   if (password1.value === "") {
     errors.pwd1 = "Password Field Can Not Be Empty";
   }
